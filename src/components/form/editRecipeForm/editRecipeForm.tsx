@@ -26,7 +26,9 @@ export default function EditRecipeForm({ params }: { params: { slug: string } })
       difficolta: '',
       ingredienti: [{ titoloGruppo: '', ingredienti: [{ quantita: '', tipoQuantita: '', nome: '' }] }],
       passaggi: [''],
-      note: '',}
+      note: '',
+      data: '',
+    }
   );
   const [errors, setErrors] = useState<string[]>(['']);
   const [loading, setLoading] = useState(true);
