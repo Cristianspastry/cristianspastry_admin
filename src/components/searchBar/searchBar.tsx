@@ -51,7 +51,11 @@ const SearchBar: React.FC<Props> = () => {
           <div className="absolute z-10 bg-white w-28 shadow-md mt-2 rounded">
             <ul className="p-4">
               {filteredRecipes.map((recipe) => (
-                <li key={recipe.id}><Link href={`/dettriceta/${recipe.id}`}>{recipe.titolo}</Link></li>
+                <li key={recipe.id}>
+                  <Link href={`/dettricetta/${recipe.id}`}>
+                    {recipe.titolo}
+                    </Link>
+                </li>
               ))}
             </ul>
           </div>

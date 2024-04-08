@@ -4,7 +4,8 @@ import { navBarLinks } from "@/utils/const";
 import { Sidebar } from "flowbite-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHouse } from '@fortawesome/free-solid-svg-icons'
 import React from 'react'
 
 type Props = {}
@@ -22,15 +23,15 @@ export default function NavBar({}: Props) {
     <Sidebar.Items>
       <Sidebar.ItemGroup>
         
-        {navBarLinks.map((link) => (
-          
-          <Link key={link.title} href={link.href} className={` ${pathname === link.href ? 'bg-blue-500' : ''} `} >
-           <Sidebar.Item icon={link.icon}>
-           
-             {link.title}
-          </Sidebar.Item>
-          </Link>
-        ))}
+      {navBarLinks.map((link) => (
+       <li key={link.title} className="mr-6">
+       <Link href={link.href} className=" flex items-center px-3 py-2 rounded-md transition-colors duration-300 ease-in-out hover:text-white hover:bg-blue-700">
+           <FontAwesomeIcon icon={link.icon} className="mr-2" />
+           {link.title}
+         
+       </Link>
+     </li>
+      ))}
         
       </Sidebar.ItemGroup>
     </Sidebar.Items>

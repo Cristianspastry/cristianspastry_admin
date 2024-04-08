@@ -1,6 +1,5 @@
 import { Ricetta } from "@/model/ricetta";
-import { FiHome } from "react-icons/fi"
-import { VscAdd } from "react-icons/vsc";
+import { faHouse,faAdd } from "@fortawesome/free-solid-svg-icons";
 
 
 // Categorie 
@@ -14,9 +13,9 @@ export const QuantityType = ['Seleziona', 'g', 'ml', 'Kg', 'q.b.', 'L', 'cucchia
 
 // Navigation links
 export const navBarLinks = [
-  { href: '/', title: 'Home', icon: FiHome },
-  { href: '/aggricetta', title: 'Aggiugni Ricetta', icon: VscAdd },
-  { href: '/uploadimg', title: 'Aggiugni Immagine', icon: VscAdd },
+  { href: '/', title: 'Home', icon: faHouse },
+  { href: '/aggricetta', title: 'Aggiugni Ricetta', icon: faAdd },
+  { href: '/uploadimg', title: 'Aggiugni Immagine', icon: faAdd },
   //{ href: '/about-me', title: 'Chi sono' },
 ]
 
