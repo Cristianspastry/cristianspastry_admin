@@ -4,7 +4,7 @@ import AddRecipeForm from "@/components/form/addRecipeForm/addRecipeForm";
 
 
 
-const AggRicetta =  () => {
+const AddRecipe =  () => {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -15,4 +15,4 @@ const AggRicetta =  () => {
   );
 }
 
-export default AggRicetta;
+export default AddRecipe;

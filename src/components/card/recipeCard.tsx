@@ -8,7 +8,7 @@ import { removeRecipeDB, replaceUrl } from '@/utils/function'
 import Link from 'next/link'
 import React,{useState} from 'react'
 import Image from 'next/image'
-
+import { routes } from '@/utils/const';
 type Props = {
   recipe: Ricetta;
 }
@@ -20,7 +20,7 @@ export default function RecipeCard({recipe}: Props) {
 
   //
   const handleEdit = () => {
-    router.push(`/modricetta/${(recipe.id)}`);
+    router.push(`/${routes.editRecipe}/${(recipe.id)}`);
   };
 
   // FUNZIONE PER L'ELIMINAZIONE DELLA RICETTA
@@ -47,7 +47,7 @@ export default function RecipeCard({recipe}: Props) {
       <div className="relative bg-white rounded-lg shadow-md overflow-hidden">
 
         <div>
-          <Link href={`/dettricetta/${recipe.id}`}>
+          <Link href={`/${routes.recipeDetails}/${recipe.id}`}>
           <Image width={300} height={300} src={recipe.imageUrl} alt={recipe.titolo} className="w-full h-48 object-cover" />
           <div className="p-4">
             <h2 className="text-xl font-bold mb-2">{recipe.titolo}</h2>

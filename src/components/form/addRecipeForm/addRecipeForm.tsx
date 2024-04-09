@@ -2,7 +2,7 @@
 "use client"
 
 import React, { useEffect, useState } from 'react'
-import { Categories, Difficulty, QuantityType, TimeUnity, formatRecipe, formattedDate, } from '@/utils/const'
+import { Categories, Difficulty, QuantityType, TimeUnity, formatRecipe, formattedDate, routes, } from '@/utils/const'
 import { Ricetta } from '@/model/ricetta'
 import { ref, set } from 'firebase/database'
 import { database } from '@/app/firebase'
@@ -98,7 +98,7 @@ const AddRecipeForm = (props: Props) => {
       console.log(formatRecipe(recipe));
       alert('Recetta aggiunta correttamente');
 
-      router.push('/');
+      router.push(routes.home);
     }
 
   };

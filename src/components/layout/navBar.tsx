@@ -5,7 +5,6 @@ import { Sidebar } from "flowbite-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHouse } from '@fortawesome/free-solid-svg-icons'
 import React from 'react'
 
 type Props = {}

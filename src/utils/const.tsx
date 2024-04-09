@@ -11,14 +11,21 @@ export const TimeUnity = ['Seleziona', 'sec', 'min', 'ore', 'giorni']
 // Quantita di misura 
 export const QuantityType = ['Seleziona', 'g', 'ml', 'Kg', 'q.b.', 'L', 'cucchiani', 'pizzico', 'pizzichi']
 
+// routes
+export const routes = {
+  home: '/',
+  addRecipe: '/aggricetta',
+  editRecipe: '/editrecipe',
+  recipeDetails : '/recipedetails',
+  uploadImg: '/uploadimg',
+}
+
 // Navigation links
 export const navBarLinks = [
-  { href: '/', title: 'Home', icon: faHouse },
-  { href: '/aggricetta', title: 'Aggiugni Ricetta', icon: faAdd },
-  { href: '/uploadimg', title: 'Aggiugni Immagine', icon: faAdd },
-  //{ href: '/about-me', title: 'Chi sono' },
+  { href: routes.home, title: 'Home', icon: faHouse },
+  { href: routes.addRecipe, title: 'Aggiugni Ricetta', icon: faAdd },
+  { href: routes.uploadImg, title: 'Aggiugni Immagine', icon: faAdd },
 ]
-
 
 // Formattare una ricetta in modo che sia leggibile
 export const formatRecipe = (recipe: Ricetta) => {

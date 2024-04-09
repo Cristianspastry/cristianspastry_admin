@@ -4,7 +4,7 @@ import { createMarkup, getRecipeById, } from '@/utils/function';
 import { Ricetta } from '@/model/ricetta';
 import Image from 'next/image';
 
-export default function RecipeDetailPage({ params }: { params: { slug: string } }) {
+export default function RecipeDetails({ params }: { params: { slug: string } }) {
   const [recipe, setRecipe] = useState<Ricetta | null>(null);
   const [error, setError] = useState<string[]>(['']);
   const [loading, setLoading] = useState(true);

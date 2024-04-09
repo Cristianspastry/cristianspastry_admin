@@ -3,7 +3,7 @@
 
 import { database } from '@/app/firebase';
 import { Ricetta } from '@/model/ricetta';
-import { Categories, Difficulty, QuantityType, TimeUnity, formatRecipe } from '@/utils/const';
+import { Categories, Difficulty, QuantityType, TimeUnity, formatRecipe, routes } from '@/utils/const';
 import {getRecipeById, updateRecipeDB } from '@/utils/function';
 import React, { useEffect, useState } from 'react'
 import ReactQuill from 'react-quill';
@@ -96,7 +96,7 @@ export default function EditRecipeForm({ params }: { params: { slug: string } })
       updateRecipeDB(recipe);
       setRecipe(null);
       alert('Ricetta aggiornata correttamente');
-router.push('/');
+      router.push(routes.home);
     } else {
       alert('Errore durante l\'aggiornamento della ricetta');
     }
