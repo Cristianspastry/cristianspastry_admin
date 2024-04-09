@@ -14,7 +14,7 @@ export const QuantityType = ['Seleziona', 'g', 'ml', 'Kg', 'q.b.', 'L', 'cucchia
 // routes
 export const routes = {
   home: '/',
-  addRecipe: '/aggricetta',
+  addRecipe: '/addrecipe',
   editRecipe: '/editrecipe',
   recipeDetails : '/recipedetails',
   uploadImg: '/uploadimg',

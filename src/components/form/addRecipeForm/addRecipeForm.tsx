@@ -4,13 +4,13 @@
 import React, { useEffect, useState } from 'react'
 import { Categories, Difficulty, QuantityType, TimeUnity, formatRecipe, formattedDate, routes, } from '@/utils/const'
 import { Ricetta } from '@/model/ricetta'
-import { ref, set } from 'firebase/database'
-import { database } from '@/app/firebase'
-import { addRecipetoDB, createMarkup,  isValidImageUrl } from '@/utils/function'
-import ReactQuill from 'react-quill'
+import { addRecipetoDB,} from '@/utils/function'
 import 'react-quill/dist/quill.snow.css';
 import { v4 as uuidv4 } from 'uuid';
 import { useRouter } from 'next/navigation';
+import dynamic from 'next/dynamic';
+const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
+
 type Props = {}
 
 const AddRecipeForm = (props: Props) => {
