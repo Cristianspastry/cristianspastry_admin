@@ -49,6 +49,7 @@ export const formatRecipe = (recipe: Ricetta) => {
 
 // db path
 export const dbPath = 'recipes/'
+
 // db url
 export const dbURL = 'https://cristianspastry-default-rtdb.europe-west1.firebasedatabase.app/'
 
