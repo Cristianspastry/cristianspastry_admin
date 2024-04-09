@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { getRecipesDB } from '@/utils/function';
 import { Ricetta } from '@/model/ricetta';
 import Link from 'next/link';
+import { routes } from '@/utils/const';
 
 
 
@@ -52,7 +53,7 @@ const SearchBar: React.FC<Props> = () => {
             <ul className="p-4">
               {filteredRecipes.map((recipe) => (
                 <li key={recipe.id}>
-                  <Link href={`/dettricetta/${recipe.id}`}>
+                  <Link href={`${routes.recipeDetails}/${recipe.id}`}>
                     {recipe.titolo}
                     </Link>
                 </li>
