@@ -8,12 +8,7 @@ const nextConfig = {
           port: '',
           
         },
-        {
-          protocol: 'https',
-          hostname: 'davidezambelli.com',
-          port: '',
-          pathname: '',}
-        ],
+      ],
       },
 };
 /*
