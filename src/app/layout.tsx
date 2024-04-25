@@ -4,6 +4,8 @@ import "./globals.css";
 import Link from "next/link";
 import { FiHome, FiLogOut, FiSettings } from "react-icons/fi";
 import NavBar from "@/components/layout/navBar";
+import LayoutProvider from "@/components/layout/layout";
+import { AuthProvider } from "@/components/AuthContext/authContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,11 +22,18 @@ export default function RootLayout({
   return (
     <html lang="en">
      <body className="flex">
-      <NavBar />
-      <main className="flex-1">
+      <AuthProvider>
+      <LayoutProvider>
+        <main className="flex-1">
         {children}
-      </main>
+        </main>
+      </LayoutProvider>
+      </AuthProvider>
     </body>
     </html>
   );
 }
+/*<NavBar />
+      <main className="flex-1">
+        {children}
+      </main>*/

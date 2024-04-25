@@ -48,7 +48,7 @@ export default function RecipeCard({recipe}: Props) {
 
         <div>
           <Link href={`${routes.recipeDetails}/${recipe.id}`}>
-          <Image width={300} height={300} src={recipe.imageUrl} alt={recipe.titolo} className="w-full h-48 object-cover" />
+          <img width={300} height={300} src={recipe.imageUrl} alt={recipe.titolo} className="w-full h-48 object-cover" />
           <div className="p-4">
             <h2 className="text-xl font-bold mb-2">{recipe.titolo}</h2>
             <p className="text-lg font-semibold mb-2">{recipe.categoria}</p>

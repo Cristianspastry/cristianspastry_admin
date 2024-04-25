@@ -1,5 +1,5 @@
 import { Ricetta } from "@/model/ricetta";
-import { faHouse,faAdd } from "@fortawesome/free-solid-svg-icons";
+import { faHouse,faAdd,faMessage,faBowlFood } from "@fortawesome/free-solid-svg-icons";
 
 
 // Categorie 
@@ -14,17 +14,22 @@ export const QuantityType = ['Seleziona', 'g', 'ml', 'Kg', 'q.b.', 'L', 'cucchia
 // routes
 export const routes = {
   home: '/',
+  ricette : '/recipes',
   addRecipe: '/addrecipe',
   editRecipe: '/editrecipe',
   recipeDetails : '/recipedetails',
   uploadImg: '/uploadimg',
+  messaggi : '/messages',
+  login :  '/login',
 }
 
 // Navigation links
 export const navBarLinks = [
   { href: routes.home, title: 'Home', icon: faHouse },
+  { href: routes.ricette, title: 'Ricette', icon: faBowlFood, },
   { href: routes.addRecipe, title: 'Aggiugni Ricetta', icon: faAdd },
   { href: routes.uploadImg, title: 'Aggiugni Immagine', icon: faAdd },
+  { href: routes.messaggi, title: 'Messaggi', icon: faMessage },
 ]
 
 // Formattare una ricetta in modo che sia leggibile
