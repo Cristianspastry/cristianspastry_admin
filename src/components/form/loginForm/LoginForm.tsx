@@ -1,22 +1,25 @@
+"use client"
 
-
-import { useForm } from 'react-hook-form';
-
-import React from 'react'
+import React, { useState } from 'react'
 import { useAuth } from '@/components/AuthContext/authContext';
 import { LoginCredentials } from '@/utils/const';
+
 type Props = {}
 
 function LoginForm() {
-    const { register, handleSubmit, formState: { errors } } = useForm();
-   const {login} = useAuth();
+const [credentials,setCredentials] = useState({
+  email: '',
+  password: '',
+});
 
-  const onSubmit = (data : any,e : any) => {
+const {login} = useAuth();
+
+  const onSubmit = (e : React.FormEvent) => {
     e.preventDefault();
     // Esegui azioni di autenticazione con i dati del modulo
-    if (data.email === LoginCredentials.email && data.password === LoginCredentials.password) {
+    if (credentials.email === LoginCredentials.email && credentials.password === LoginCredentials.password) {
       // Autenticazione riuscita, imposta la variabile di sessione o reindirizza alla dashboard appropriata
-    console.log(data);
+    console.log(credentials);
     login();
   } else {
     // Autenticazione fallita, visualizza un messaggio di errore
@@ -25,18 +28,18 @@ function LoginForm() {
 }
   return (
     <>
-     <form className="mt-8 space-y-6" onSubmit={handleSubmit(onSubmit)}>
+     <form className="mt-8 space-y-6" onSubmit={onSubmit}>
           <input type="hidden" name="remember" value="true" />
           <div className="rounded-md shadow-sm -space-y-px">
+            
             <div>
               <label htmlFor="email-address" className="sr-only">Email</label>
-              <input id="email-address"  type="email" autoComplete="email" required {...register("email")} className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Email address" />
-              {errors.email && <p className="text-red-500 text-xs mt-1">{"errors.email.message"}</p>}
+              <input id="email-address"  type="email" autoComplete="email" required value={credentials.email} onChange={e => setCredentials({ ...credentials, email: e.target.value })}  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Email address" />
             </div>
+
             <div>
               <label htmlFor="password" className="sr-only">Password</label>
-              <input id="password"  type="password" autoComplete="current-password" required {...register("password")} className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Password" />
-              {errors.password && <p className="text-red-500 text-xs mt-1">{"errors.password.message"}</p>}
+              <input id="password"  type="password" autoComplete="current-password" required value={credentials.password} onChange={e => setCredentials({ ...credentials, password: e.target.value })} className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Password" />
             </div>
           </div>
 

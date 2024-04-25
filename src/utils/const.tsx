@@ -3,7 +3,7 @@ import { faHouse,faAdd,faMessage,faBowlFood } from "@fortawesome/free-solid-svg-
 
 
 export const LoginCredentials = {
-  email: 'cristianspastry@gmail',
+  email: 'cristianspastry@gmail.com',
   password: 'Cristianspastry2024',
 }
 
