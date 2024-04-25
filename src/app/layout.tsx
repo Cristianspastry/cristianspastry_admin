@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Link from "next/link";
-import { FiHome, FiLogOut, FiSettings } from "react-icons/fi";
-import NavBar from "@/components/layout/navBar";
 import LayoutProvider from "@/components/layout/layout";
 import { AuthProvider } from "@/components/AuthContext/authContext";
 

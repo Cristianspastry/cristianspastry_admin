@@ -2,6 +2,11 @@ import { Ricetta } from "@/model/ricetta";
 import { faHouse,faAdd,faMessage,faBowlFood } from "@fortawesome/free-solid-svg-icons";
 
 
+export const LoginCredentials = {
+  email: 'cristianspastry@gmail',
+  password: 'Cristianspastry2024',
+}
+
 // Categorie 
 export const Categories = ['Seleziona', 'Ricette Base', 'Lievitati', 'Torte', 'Dolci Da Forno', 'Biscotti', 'Dolci Veloci']
 // Difficolta

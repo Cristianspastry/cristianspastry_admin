@@ -1,5 +1,5 @@
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+//import { initializeApp } from "firebase/app";
+//import { getAnalytics } from "firebase/analytics";
 import { getDatabase } from "firebase/database";
 import { FirebaseStorage, getStorage,ref } from "firebase/storage";
 import firebase from "firebase/compat/app";

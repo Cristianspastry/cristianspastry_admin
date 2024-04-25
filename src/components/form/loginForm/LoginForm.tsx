@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 
 import React from 'react'
 import { useAuth } from '@/components/AuthContext/authContext';
+import { LoginCredentials } from '@/utils/const';
 type Props = {}
 
 function LoginForm() {
@@ -13,7 +14,7 @@ function LoginForm() {
   const onSubmit = (data : any,e : any) => {
     e.preventDefault();
     // Esegui azioni di autenticazione con i dati del modulo
-    if (data.email === 'cristianspastry@gmail.com' && data.password === '12345678') {
+    if (data.email === LoginCredentials.email && data.password === LoginCredentials.password) {
       // Autenticazione riuscita, imposta la variabile di sessione o reindirizza alla dashboard appropriata
     console.log(data);
     login();

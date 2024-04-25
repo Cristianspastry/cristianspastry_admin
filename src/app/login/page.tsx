@@ -1,6 +1,5 @@
 import LoginForm from '@/components/form/loginForm/LoginForm';
 import React from 'react';
-import { useForm } from 'react-hook-form';
 
 function LoginPage() {
  
